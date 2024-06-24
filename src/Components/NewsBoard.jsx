@@ -3,10 +3,14 @@ import { useState, useEffect } from "react";
 
 const NewsBoard = () => {
   const [articles, setArticles] = useState([]);
+  const apikey = import.meta.env.VITE_API_KEY
+
   useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${
-      import.meta.env.VITE_API_KEY
-    }`;
+    // let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
+
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`;
+
+    // let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=411ad118160042bface02706623fece7`;
 
     fetch(url)
       .then((response) => response.json())
