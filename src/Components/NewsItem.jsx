@@ -7,8 +7,8 @@ const NewsItem = ({ title, description, src, url }) => {
       <img
         src={src}
         style={{ height: "200px", width: "360px" }}
-        className="card-img-top"
-        alt="..."
+        className="card-img-top img-fluid"
+        alt="image"
       />
       <div className="card-body">
         <h5 className="card-title">{title.slice(0, 50)}</h5>

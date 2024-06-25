@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const NewsBoard = () => {
   const [articles, setArticles] = useState([]);
-  const apikey = import.meta.env.VITE_API_KEY
+  const apikey = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     // let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
@@ -17,7 +17,7 @@ const NewsBoard = () => {
       .then((data) => setArticles(data.articles));
   }, []);
   return (
-    <div>
+    <div className="mx-auto">
       <h2 className="text-center">
         Latest <span className="badge bg-danger">News</span>
       </h2>
